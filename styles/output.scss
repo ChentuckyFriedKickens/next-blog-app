@@ -558,6 +558,10 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.w-1\/2 {
+  width: 50%;
+}
+
 .items-center {
   align-items: center;
 }
@@ -657,4 +661,10 @@ h3 {
   border-color: rgb(0 112 243 / var(--tw-border-opacity));
   --tw-text-opacity: 1;
   color: rgb(0 112 243 / var(--tw-text-opacity));
+}
+
+@media (min-width: 1024px) {
+  .lg\:w-1\/2 {
+    width: 50%;
+  }
 }

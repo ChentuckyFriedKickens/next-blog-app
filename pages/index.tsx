@@ -15,7 +15,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="col justify-center items-center p-24">
-        <div>
+        <div className="lg:w-1/2">
           <h1 className="text-center">
             <span>Next js </span>Blog
           </h1>

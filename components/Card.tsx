@@ -3,7 +3,7 @@ import React from "react";
 const Card = (props: any) => {
   return (
     <div className={`card ${props.classes}`}>
-      <h3 className="pb-4">{props.name + " →"}</h3>
+      <h3 className="pb-4">{props.name || "Test Header"} →</h3>
       <p>
         {props.text ||
           `
