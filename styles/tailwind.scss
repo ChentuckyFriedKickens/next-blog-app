@@ -3,11 +3,7 @@
 @tailwind utilities;
 
 h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h2 {
   font-weight: bold;
 
   span {
@@ -25,7 +21,20 @@ h1 {
 h2 {
   font-size: 2.5rem;
 }
+h3 {
+  font-size: 1.75rem;
+}
 
 .col {
   @apply flex flex-col;
+}
+
+.res-row {
+  @apply flex flex-col lg:flex-row;
+  gap: 2rem;
+}
+
+.card {
+  border: 1px solid #eaeaea;
+  @apply rounded-xl px-8 py-8 my-4 hover:text-dodgerBlue hover:border-dodgerBlue hover:cursor-pointer transition-colors duration-200;
 }

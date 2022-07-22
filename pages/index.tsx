@@ -19,15 +19,9 @@ const Home: NextPage = () => {
           <h1>
             <span>Next js </span>Blog
           </h1>
-          <div>
-            <Card
-              name="Hello world"
-              text="
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum
-            suscipit quidem veritatis quae nesciunt possimus? Doloremque ut
-            facilis, quo, sint laboriosam omnis at maiores earum id esse porro
-            et aut?"
-            />
+          <div className="py-12 res-row">
+            <Card name="Hello world" />
+            <Card name="Hello world" />
           </div>
         </div>
       </main>

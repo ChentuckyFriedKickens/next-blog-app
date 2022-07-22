@@ -570,12 +570,22 @@ video {
   padding: 6rem;
 }
 
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.pb-4 {
+  padding-bottom: 1rem;
+}
+
 h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h2 {
   font-weight: bold;
   span {
     --tw-text-opacity: 1;
@@ -597,7 +607,50 @@ h2 {
   font-size: 2.5rem;
 }
 
+h3 {
+  font-size: 1.75rem;
+}
+
 .col {
   display: flex;
   flex-direction: column;
+}
+
+.res-row {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+  .res-row {
+    flex-direction: row;
+  }
+}
+
+.res-row {
+  gap: 2rem;
+}
+
+.card {
+  border: 1px solid #eaeaea;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.75rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  transition-property: color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+.card:hover {
+  cursor: pointer;
+  --tw-border-opacity: 1;
+  border-color: rgb(0 112 243 / var(--tw-border-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(0 112 243 / var(--tw-text-opacity));
 }
