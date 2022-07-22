@@ -16,7 +16,7 @@ const Home: NextPage = () => {
       </Head>
       <main className="col justify-center items-center p-24">
         <div>
-          <h1>
+          <h1 className="text-center">
             <span>Next js </span>Blog
           </h1>
           <div className="py-12 res-row">
