@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+
+h1 {
+  span {
+    @apply text-dodgerBlue;
+    text-decoration: none;
+  }
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+}
+
+.col {
+  @apply flex flex-col;
+}

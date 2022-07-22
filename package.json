@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "tailwind": "tailwindcss -i styles/tailwind.scss -o ./styles/output.scss --watch",
+    "tailwind": "tailwindcss -i ./styles/tailwind.scss -o ./styles/output.scss --watch",
     "github": "git commit -am 'automated commit' && git push",
     "start": "next start",
     "lint": "next lint"
