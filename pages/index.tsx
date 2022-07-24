@@ -2,11 +2,17 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 
+import { useState, useEffect } from "react";
+
 import Card from "../components/Card";
 
 import styles from "../styles/Home.module.scss";
 
-const Home: NextPage = () => {
+function getData() {}
+
+const Home: NextPage = ({ prop }: any) => {
+  const [state, setState]: any = useState();
+
   return (
     <div>
       <Head>
@@ -19,14 +25,23 @@ const Home: NextPage = () => {
           <h1 className="text-center">
             <span>Next js </span>Blog
           </h1>
-          <div className="py-12 res-row">
+          <div className="py-12 col">
             <Card name="Hello world" />
-            <Card name="Hello world" />
+            {prop.map((article: any) => {
+              return <Card name={article.name} key={article.id} />;
+            })}
           </div>
         </div>
       </main>
     </div>
   );
 };
+
+export async function getServerSideProps() {
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const data = await res.json();
+  console.log(data);
+  return { props: { prop: data } };
+}
 
 export default Home;
