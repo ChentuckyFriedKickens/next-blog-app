@@ -28,7 +28,13 @@ const Home: NextPage = ({ prop }: any) => {
           <div className="py-12 col">
             <Card name="Hello world" />
             {prop.map((article: any) => {
-              return <Card name={article.name} key={article.id} />;
+              return (
+                <Card
+                  name={article.title}
+                  text={article.body}
+                  key={article.id}
+                />
+              );
             })}
           </div>
         </div>
