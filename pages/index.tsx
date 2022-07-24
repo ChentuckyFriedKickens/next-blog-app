@@ -30,7 +30,7 @@ const Home: NextPage = ({ prop }: any) => {
             {prop.map((article: any) => {
               return (
                 <Card
-                  name={article.title}
+                  name={article.email}
                   text={article.body}
                   key={article.id}
                 />
@@ -44,7 +44,7 @@ const Home: NextPage = ({ prop }: any) => {
 };
 
 export async function getServerSideProps() {
-  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const res = await fetch("https://jsonplaceholder.typicode.com/comments");
   const data = await res.json();
   console.log(data);
   return { props: { prop: data } };
